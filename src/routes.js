@@ -3,9 +3,10 @@ import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
 import Billing from "views/Dashboard/Billing.js";
 import Profile from "views/Dashboard/Profile.js";
+import MyTaskList from "views/Dashboard/MyTaskList";
 import SignIn from "views/Pages/SignIn.js";
-import SignUp from "views/Pages/SignUp.js";
 
+import SignUp from "views/Pages/SignUp.js";
 import {CreditIcon, DocumentIcon, HomeIcon, PersonIcon, RocketIcon, StatsIcon,} from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -19,7 +20,7 @@ var dashRoutes = [
   {
     path: "/tables",
     name: "Tables",
-    icon: <StatsIcon color="inherit" />,
+    icon: <StatsIcon color="inherit"/>,
     component: Tables,
     layout: "/admin",
   },
@@ -31,6 +32,13 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
+    path: "/mytask",
+    name: "MyTask",
+    icon: <CreditIcon color="inherit"/>,
+    component: MyTaskList,
+    layout: "/admin",
+  },
+  {
     name: "ACCOUNT PAGES",
     category: "account",
     state: "pageCollapse",
@@ -38,7 +46,7 @@ var dashRoutes = [
       {
         path: "/profile",
         name: "Profile",
-        icon: <PersonIcon color="inherit" />,
+        icon: <PersonIcon color="inherit"/>,
         secondaryNavbar: true,
         component: Profile,
         layout: "/admin",
